@@ -1,0 +1,150 @@
+/*
+****************************
+    1. IMPORT | FONTS
+****************************
+*/
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icommon/icomoon.eot?w397uy");
+  src: url("../fonts/icommon/icomoon.eot?w397uy#iefix") format("embedded-opentype"), url("../fonts/icommon/icomoon.ttf?w397uy") format("truetype"), url("../fonts/icommon/icomoon.woff?w397uy") format("woff"), url("../fonts/icommon/icomoon.svg?w397uy#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left-outline-border:before {
+  content: "\e900";
+}
+
+.icon-Down:before {
+  content: "\e901";
+}
+
+.icon-Left:before {
+  content: "\e902";
+}
+
+.icon-Right:before {
+  content: "\e903";
+}
+
+.icon-Up:before {
+  content: "\e904";
+}
+
+.icon-Value-Down:before {
+  content: "\e905";
+}
+
+.icon-Value-Up:before {
+  content: "\e906";
+}
+
+/*
+****************************
+2. IMPORT | COMPONENTS
+****************************
+*/
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.horizotaltimeline {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: 100%;
+}
+.horizotaltimeline[id^="timeline-"],
+.horizotaltimeline [id*=" timeline-"] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: visible;
+  margin-top: 24px;
+}
+.horizotaltimeline .timeline-nav {
+  position: relative;
+  display: flex;
+}
+.horizotaltimeline .timeline-nav [class^="icon-"],
+.horizotaltimeline .timeline-nav [class*=" icon-"] {
+  color: #005793;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 6px;
+}
+.horizotaltimeline .timeline-nav [class^="icon-"].icon-Left,
+.horizotaltimeline .timeline-nav [class*=" icon-"].icon-Left {
+  margin-right: 40px;
+}
+.horizotaltimeline .timeline-nav [class^="icon-"].icon-Right,
+.horizotaltimeline .timeline-nav [class*=" icon-"].icon-Right {
+  margin-left: 40px;
+}
+.horizotaltimeline .timeline-nav [class^="icon-"].disabled,
+.horizotaltimeline .timeline-nav [class*=" icon-"].disabled {
+  cursor: not-allowed;
+}
+.horizotaltimeline .timeline-nav .timeline-events {
+  overflow: hidden;
+  height: 100px;
+  display: flex;
+  flex: 1 1 auto !important;
+}
+.horizotaltimeline .timeline-nav .timeline-events .line {
+  position: relative;
+  height: 4px;
+  background: #aeb5bf;
+  margin-top: 16px;
+}
+.horizotaltimeline .timeline-nav .timeline-events .line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #005793;
+  width: 50%;
+  height: 4px;
+}
+.horizotaltimeline .timeline-nav .timeline-events .line .timeline-itens {
+  display: flex;
+  justify-content: center;
+}
+.horizotaltimeline .timeline-nav .timeline-events .line .timeline-itens .timeline-item {
+  cursor: pointer;
+  z-index: 1;
+}
+.horizotaltimeline .timeline-nav .timeline-events .line .timeline-itens .timeline-item.active .dots {
+  background: #005793;
+}
+.horizotaltimeline .timeline-nav .timeline-events .line .timeline-itens .timeline-item .dots {
+  border-radius: 100%;
+  width: 16px;
+  height: 16px;
+  background: #aeb5bf;
+  display: block;
+  margin: -6px auto 0;
+}
+.horizotaltimeline .timeline-nav .timeline-events .line .timeline-itens .timeline-item .data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*# sourceMappingURL=import.dist.css.map */
